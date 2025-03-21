@@ -1,0 +1,17 @@
+package java.br.unitins.tp1.model;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+@JsonFormat(shape = JsonFormat.Shape.OBJECT)
+public enum TipoPonta{
+
+
+    public static TipoPonta valueOf(int id){
+        for(TipoPonta tipoPonta: TipoPonta.values()){
+            if(tipoPonta.getId() == id)
+            return tipoPonta;
+        }
+        return null;
+    }
+    
+}
